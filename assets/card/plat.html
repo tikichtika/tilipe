@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Dish Viewer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000000;
+            
+            padding: 20px;
+            height: 100vh;
+            
+        }
+        
+        
+        model-viewer {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .thumbnails img {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .rating {
+            color: hsl(38, 61%, 73%);
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .description {
+            color: #555;
+            margin-top: 10px;
+        }
+        .ar-button {
+            display: inline-block;
+            background: hsl(38, 61%, 73%);
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 15px;
+            font-family:  'Forum', cursive;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        html, body {
+            height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    background-color: rgba(0, 0, 0, 0.952);
+    overflow-x: hidden;
+}
+
+
+
+
+.card {
+    
+    
+    background: rgb(0, 0, 0);
+    height: 100vh; /* Make the card take up full screen height */
+    overflow-y: auto; /* Add vertical scroll if content overflows */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    
+    
+    /* تمكين التمرير داخل العنصر */
+}
+.section-subtitle {
+  position: relative;
+  color: var(--gold-crayola);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-2);
+  margin-block-end: 12px;
+}
+
+.section-subtitle::after {
+  content: url('../images/separator.svg');
+  display: block;
+  width: 100px;
+  margin-inline: auto;
+  margin-block-start: 5px;
+}
+.label-2 { font-size: var(--fontSize-label-2); }
+.headline-1 { font-size: var(--fontSize-headline-1); }
+.headline-1 { margin-block-end: 40px; }     
+.section-title { margin-block-end: 40px; }
+.footer-brand{
+    height: 100vh;
+    max-height: 800px;
+}
+
+
+
+    </style>
+</head>
+<body style="background-color: rgb(0, 0, 0);">
+
+    
+  
+    
+    <div class="card ">
+        <div class="footer-brand has-before has-after">
+        <h1 class="section-subtitle label-2">AR Dish Viewer</h1>
+        <p class="headline-1 section-title" style="font-weight: 20;color: rgba(255, 255, 255, 0.724);font-family:  'Forum', cursive;">View a 3D model of a dish in AR</p>
+        <!-- 3D Model Viewer -->
+        <model-viewer 
+        poster="/assets/images/event-1.jpg"
+        touch-action="pan-y" 
+        camera-orbit="calc(0rad + env(window-scroll-y) * 2rad) calc(90deg - env(window-scroll-y) * 90deg) calc(3m - env(window-scroll-y) * 5m)" 
+        min-camera-orbit="auto auto 2m" 
+        max-camera-orbit="auto auto 10m" 
+        field-of-view="calc(30deg + env(window-scroll-y) * 10deg)" 
+        min-field-of-view="20deg" 
+        max-field-of-view="80deg"
+        shadow-intensity="1"
+    id="modelViewer"
+    src="https://raw.githubusercontent.com/tikichtika/3D-models/main/nabta.glb" 
+    alt="3D Dish" 
+    auto-rotate 
+    camera-controls 
+    ar 
+    ar-modes="scene-viewer quick-look">
+        </model-viewer>
+        
+        <!-- Thumbnails -->
+        
+        
+        <!-- Rating -->
+        
+        
+        <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+        <p class="description">Pellentesque condimentum nisi in ante facilisis, at mattis est sagittis. Nullam enet neque et sapien.</p>
+        <a href="#" class="ar-button" id="arButton">Show in AR</a>
+    </div>
+    
+</div>
+
+        <!-- AR Button -->
+        
+    </div>
+    
+    
+
+
+
+    <script>
+        document.getElementById("arButton").addEventListener("click", function () {
+            let modelViewer = document.getElementById("modelViewer");
+            if (modelViewer.canActivateAR) {
+                modelViewer.activateAR();
+            } else {
+                alert("AR is not supported on this device!");
+            }
+        });
+    </script>
+</body>
+</html>

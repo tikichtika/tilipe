@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>LA TULIPE NOIR</title>
+      <meta name="title" content="LA TULIPE NOIR">
+      <meta name="description" content="This is a Restaurant html template made by solitanix">
+      <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./assets/css/style.css">
+      <style>
+        
+ 
+         .menu {
+             display: flex;
+             flex-wrap: wrap;
+             gap: 20px;
+             justify-content: center;
+             padding: 20px;
+         }
+ 
+         .card {
+             background-color: rgba(15, 15, 15, 0.829);
+             border-radius: 15px;
+             overflow: hidden;
+             width: 350px;
+             text-align: center;
+             padding: 15px;
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+         }
+ 
+         .card img {
+             width: 100%;
+             height: 450px;
+             object-fit: cover;
+             border-radius: 10px;
+         }
+ 
+         .card-title {
+             color: rgb(255, 255, 255);
+             margin-top: 15px;
+             font-size: 3rem;
+             
+         }
+ 
+         .card-description {
+             font-size: 1.4rem;
+             color: #bbb;
+             margin: 8px 0;
+         }
+ 
+         .card-price {
+             font-size: 1.2rem;
+             color: #ffcc00;
+             font-weight: bold;
+         }
+     </style>
+    
+   </head>
+   <body id="top">
+      <div class="preload" data-preaload>
+         <div class="circle"></div>
+         <p class="text" style="text-align: center;">LA TULIPE <br>NOIR</p>
+      </div>
+      <div class="topbar">
+         <div class="container">
+            <address class="topbar-item">
+               <div class="icon">
+                  <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+               </div>
+
+
+               <span class="span">Boulevard Hassan II, Quartier Smaâla Résidence Amine 4 n°1. Settat</span>
+            </address>
+            <div class="separator"></div>
+            <div class="topbar-item item-2">
+               <div class="icon">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+               </div>
+               <span class="span">Daily : 8.00 am to 11.00 pm</span>
+            </div>
+            <a href="tel:+11234567890" class="topbar-item link">
+               <div class="icon">
+                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+               </div>
+               <span class="span">+212 6 68 98 51 32</span>
+            </a>
+            <div class="separator"></div>
+            <a href="mailto:booking@restaurant.com" class="topbar-item link">
+               <div class="icon">
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+               </div>
+               <span class="span">LaTulipeNoir@gmail.com</span>
+            </a>
+         </div>
+      </div>
+      <header class="header" data-header>
+         <div class="container">
+            <a href="#" class="logo">
+            <img class="imgzs" src="./assets/images/la.svg" width="220" height="50" alt="Grilli - Home">
+            </a>
+            <nav class="navbar" data-navbar>
+               <button class="close-btn" aria-label="close menu" data-nav-toggler>
+                  <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+               </button>
+               <a href="#" class="logo">
+               <img src="./assets/images/la.svg" width="160" height="50" alt="Grilli - Home">
+               </a>
+               <ul class="navbar-list">
+                  <li class="navbar-item">
+                     <a href="/index.html" class="navbar-link hover-underline ">
+                        <div class="separator"></div>
+                        <span class="span">Home</span>
+                     </a>
+                  </li>
+                  <li class="navbar-item">
+                     <a href="#menu" class="navbar-link hover-underline ">
+                        <div class="separator"></div>
+                        <span class="span">Menus</span>
+                     </a>
+                  </li>
+                  <li class="navbar-item">
+                     <a href="#about" class="navbar-link hover-underline">
+                        <div class="separator"></div>
+                        <span class="span">About Us</span>
+                     </a>
+                  </li>
+                  <li class="navbar-item">
+                     <a href="#EVENT" class="navbar-link hover-underline active">
+                        <div class="separator"></div>
+                        <span class="span">AR Menu</span>
+                     </a>
+                  </li>
+                  <li class="navbar-item">
+                     <a href="#footer" class="navbar-link hover-underline">
+                        <div class="separator"></div>
+                        <span class="span">Contact</span>
+                     </a>
+                  </li>
+               </ul>
+               <div class="text-center">
+                  <p class="headline-1 navbar-title">Visit Us</p>
+                  <address class="body-4">Restaurant St, Delicious City, <br>London 9578, UK</address>
+                  <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
+                  <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">booking@grilli.com</a>
+                  <div class="separator"></div>
+                  <p class="contact-label">Booking Request</p>
+                  <a href="tel:+88123123456" class="body-1 contact-number hover-underline">+88-123-123456</a>
+               </div>
+            </nav>
+            <a href="#reservation" class="btn btn-secondary">
+            <span class="text text-1">Find A Table</span>
+            <span class="text text-2" aria-hidden="true">Find A Table</span>
+            </a>
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+            </button>
+            <div class="overlay" data-nav-toggler data-overlay></div>
+         </div>
+      </header>
+      <main>
+         <article>
+
+
+
+             <!-- 
+               - #hero
+               -->
+            <section style="height: 400px;" class="hero text-center" aria-label="home" id="home">
+               <ul class="hero-slider" data-hero-slider>
+                  <li class="slider-item active" data-hero-slider-item>
+                     <div  class="slider-bg">
+                        <img src="./assets/images/Design sans titre (1).png" width="1880" height="950" alt="" class="img-cover">
+                     </div>
+                     <p class="label-2 section-subtitle slider-reveal">Tradational & Hygine</p>
+                     <h1 class="display-1 hero-title slider-reveal">Menu with <br>AR</h1>
+
+                     
+                  </li>
+                 
+               </ul>
+               
+            
+            </section>
+         </article>
+      </main>
+<div>
+   
+      <!--MENU SECTION -->
+
+   <section class="section service bg-black-10 text-center" aria-label="service">
+      <div class="container">
+         <p class="section-subtitle label-2">Flavors For Royalty</p>
+         <h2 class="headline-1 section-title">We Offer Top Notch</h2>
+         
+   <div class="menu">
+
+      <div class="card  hover:card card-banner" >
+         <figure style="border-radius:10px ;" class=" card-banner img-holder" >
+            <img src="https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"   alt="Greek Salad"
+               class="img-cover">
+         </figure>
+          <div class="title-wrapper">
+            <h3 class="title-3">
+               <a  href="#" class="card-title">Greek Salad</a>
+            </h3>
+         </div>
+         <p class="card-text label-1 card-description">
+            Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+         </p>
+         <a href="#menu" class="btn-text hover-underline label-2">View AR</a>
+
+      </div>
+      <div class="card  hover:card card-banner" >
+         <figure style="border-radius:10px ;" class=" card-banner img-holder" >
+            <img src="https://images.pexels.com/photos/16890470/pexels-photo-16890470/free-photo-of-pizza-margherita-au-levain-avec-basilic-frais-hache.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"   alt="Greek Salad"
+               class="img-cover">
+         </figure>
+          <div class="title-wrapper">
+            <h3 class="title-3">
+               <a  href="#" class="card-title">Greek Salad</a>
+            </h3>
+         </div>
+         <p class="card-text label-1 card-description">
+            Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+         </p>
+         <a href="#menu" class="btn-text hover-underline label-2">View AR</a>
+
+      </div>
+      <div class="card  hover:card card-banner" >
+         <figure style="border-radius:10px ;" class=" card-banner img-holder" >
+            <img src="https://images.pexels.com/photos/28872600/pexels-photo-28872600/free-photo-of-burger-au-fromage-garni-de-nachos-et-de-guacamole.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"   alt="Greek Salad"
+               class="img-cover">
+         </figure>
+          <div class="title-wrapper">
+            <h3 class="title-3">
+               <a  href="#" class="card-title">Greek Salad</a>
+            </h3>
+         </div>
+         <p class="card-text label-1 card-description">
+            Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+         </p>
+         <a href="#menu" class="btn-text hover-underline label-2">View AR</a>
+
+      </div>
+      <div class="card  hover:card card-banner" >
+         <figure style="border-radius:10px ;" class=" card-banner img-holder" >
+            <img src="https://images.pexels.com/photos/28895983/pexels-photo-28895983/free-photo-of-gros-plan-d-une-main-faisant-tournoyer-des-spaghettis-sur-une-fourchette.jpeg?auto=compress&cs=tinysrgb&w=600"   alt="Greek Salad"
+               class="img-cover">
+         </figure>
+          <div class="title-wrapper">
+            <h3 class="title-3">
+               <a  href="#" class="card-title">Greek Salad</a>
+            </h3>
+         </div>
+         <p class="card-text label-1 card-description">
+            Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+         </p>
+         <a href="#menu" class="btn-text hover-underline label-2">View AR</a>
+
+      </div>
+      <div class="card  hover:card card-banner" >
+         <figure style="border-radius:10px ;" class=" card-banner img-holder" >
+            <img src="https://images.pexels.com/photos/13677427/pexels-photo-13677427.jpeg?auto=compress&cs=tinysrgb&w=600"   alt="Greek Salad"
+               class="img-cover">
+         </figure>
+          <div class="title-wrapper">
+            <h3 class="title-3">
+               <a  href="#" class="card-title">Greek Salad</a>
+            </h3>
+         </div>
+         <p class="card-text label-1 card-description">
+            Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+         </p>
+         <a href="#menu" class="btn-text hover-underline label-2">View AR</a>
+
+      </div>
+      <div class="card  hover:card card-banner" >
+         <figure style="border-radius:10px ;" class=" card-banner img-holder" >
+            <img src="https://images.pexels.com/photos/28732302/pexels-photo-28732302/free-photo-of-patisserie-salee-au-citron-presse-et-au-citron-vert-a-qazvin.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"   alt="Greek Salad"
+               class="img-cover">
+         </figure>
+          <div class="title-wrapper">
+            <h3 class="title-3">
+               <a  href="#" class="card-title">Greek Salad</a>
+            </h3>
+         </div>
+         <p class="card-text label-1 card-description">
+            Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+         </p>
+         <a href="#menu" class="btn-text hover-underline label-2">View AR</a>
+
+      </div>
+      <div class="card  hover:card card-banner" >
+         <figure style="border-radius:10px ;" class=" card-banner img-holder" >
+            <img src="https://images.pexels.com/photos/28895975/pexels-photo-28895975/free-photo-of-delicieuse-variete-de-tacos-farcis-a-la-viande.jpeg?auto=compress&cs=tinysrgb&w=600"   alt="Greek Salad"
+               class="img-cover">
+         </figure>
+          <div class="title-wrapper">
+            <h3 class="title-3">
+               <a  href="#" class="card-title">Greek Salad</a>
+            </h3>
+         </div>
+         <p class="card-text label-1 card-description">
+            Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+         </p>
+         <a href="#menu" class="btn-text hover-underline label-2">View AR</a>
+
+      </div>
+      <div class="card  hover:card card-banner" >
+         <figure style="border-radius:10px ;" class=" card-banner img-holder" >
+            <img src="https://images.pexels.com/photos/10361459/pexels-photo-10361459.jpeg?auto=compress&cs=tinysrgb&w=600"   alt="Greek Salad"
+               class="img-cover">
+         </figure>
+          <div class="title-wrapper">
+            <h3 class="title-3">
+               <a  href="#" class="card-title">Greek Salad</a>
+            </h3>
+         </div>
+         <p class="card-text label-1 card-description">
+            Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+         </p>
+         <a href="#menu" class="btn-text hover-underline label-2">View AR</a>
+
+      </div>
+      <a href="/assets/card/plat.html">
+         <div class="card  hover:card card-banner" >
+         <figure style="border-radius:10px ;" class=" card-banner img-holder" >
+            <img src="https://images.pexels.com/photos/27645102/pexels-photo-27645102/free-photo-of-nourriture-aliments-restaurant-appareil-photo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"   alt="Greek Salad"
+               class="img-cover">
+         </figure>
+          <div class="title-wrapper">
+            <h3 class="title-3">
+               <a  href="#" class="card-title">Greek Salad</a>
+            </h3>
+         </div>
+         <p class="card-text label-1 card-description">
+            Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+         </p>
+         <a href="/assets/card/plat.html" class="btn-text hover-underline label-2">View AR</a>
+
+      </div></a>
+      
+
+
+
+
+
+
+      <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
+                     class="shape shape-2 move-anim">
+       <img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" alt="shape"
+                     class="shape shape-3 move-anim">
+  </div>
+ </section>
+ 
+
+   <!-- 
+         - custom js link
+         -->
+         <script src="./assets/js/script.js"></script>
+         <!-- 
+            - ionicon link
+            -->
+         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      
+</body>
