@@ -413,34 +413,6 @@ window.addEventListener("load", () => {
 
 
 
-// Select the chatbot button, container, and audio files
-const chatbotButton = document.getElementById('chatbotButton');
-const chatbotContainer = document.getElementById('chatbotContainer');
-
-// Create audio elements
-const openSound = new Audio('green.mp3'); // Replace with your sound file
-const closeSound = new Audio('yellow.mp3'); // Replace with your sound file
-
-// Function to toggle the chatbot visibility and play sounds
-chatbotButton.addEventListener('click', function(event) {
-    event.stopPropagation(); // Prevent click from propagating to document
-
-    if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
-        chatbotContainer.style.display = 'block';  // Show the chatbot iframe
-        openSound.play();  // Play opening sound
-    } else {
-        chatbotContainer.style.display = 'none';  // Hide the chatbot iframe
-        closeSound.play();  // Play closing sound
-    }
-});
-
-// Close chatbot when clicking outside
-document.addEventListener('click', function(event) {
-    if (!chatbotContainer.contains(event.target) && event.target !== chatbotButton) {
-        chatbotContainer.style.display = 'none';  // Hide chatbot
-        closeSound.play();  // Play closing sound
-    }
-});
 
 
 
@@ -451,5 +423,39 @@ document.addEventListener('click', function(event) {
 
 
 
-
-
+  const chatbotButton = document.getElementById('chatbotButton');
+  const chatbotContainer = document.getElementById('chatbotContainer');
+  const chatbotIframe = document.getElementById('chatbotIframe');
+  
+  const openSound = new Audio('green.mp3'); 
+  const closeSound = new Audio('yellow.mp3');
+  
+  // التحقق مما إذا كان الجهاز هو iPhone أو iPad
+  const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+  
+  chatbotButton.addEventListener('click', function(event) {
+      event.stopPropagation();
+  
+      if (isIOS) {
+          // فتح الشات بوت في نافذة جديدة على الآيفون
+          window.open('https://www.chatbase.co/chatbot-iframe/p-F8yFJFitj6Bf3_7gunK', '_blank');
+      } else {
+          // تشغيل أو إخفاء الشات بوت في باقي الأجهزة
+          if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+              chatbotContainer.style.display = 'block';  
+              openSound.play();
+          } else {
+              chatbotContainer.style.display = 'none';  
+              closeSound.play();
+          }
+      }
+  });
+  
+  // إغلاق الشات بوت عند النقر خارج الحاوية (لغير iOS)
+  document.addEventListener('click', function(event) {
+      if (!isIOS && !chatbotContainer.contains(event.target) && event.target !== chatbotButton) {
+          chatbotContainer.style.display = 'none';
+          closeSound.play();
+      }
+  });
+  

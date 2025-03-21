@@ -2426,59 +2426,63 @@ textarea.input-field {
 
 
 
-
+/* زر تشغيل الشات بوت */
 #chatbotButton {
-    position: fixed;
-    bottom: 20px;
-    right: 12PX;
-    width: 60px; /* Set the button width */
-    height: 60px; /* Set the button height */
-    background-color: hsl(38, 61%, 73%);
-    border-radius: 50%; /* Makes the button circular */
-    border: none;
-    cursor: pointer;
-    z-index: 999999999999999999;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23000' viewBox='0 0 16 16'%3E%3Cpath d='M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9 9 0 0 0 8 15'/%3E%3C/svg%3E"); /* Set your logo image URL here */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 40px 50px; /* تغيير الحجم */
-    background-position: center; /* Centers the logo inside the button */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 12px;
+  width: 60px;
+  height: 60px;
+  background-color: hsl(38, 61%, 73%);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 999999;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23000' viewBox='0 0 16 16'%3E%3Cpath d='M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9 9 0 0 0 8 15'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Style for the chatbot iframe container */
+/* حاوية الشات بوت */
 #chatbotContainer {
-    position: fixed;
-    bottom: 70px;
-    right: 20px;
-    width: 100%;
-    max-width: 400px;
-    height: 500px;
-    display: none;  /* Hidden by default */
-    z-index: 99999999999999999999;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  display: none; /* إخفاء الشات بوت افتراضيًا */
+  z-index: 999999;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Hiding the Powered by section from Chatbase */
+/* إطار الشات بوت */
 #chatbotIframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-.chatbase-powered {
-    display: none !important; /* Hides the "Powered by" section */
+/* إخفاء العلامة التجارية */
+.hide-branding {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: black;
 }
 
-
+/* زر القفز */
 .jump-button {
   cursor: pointer;
   animation: jump 1s infinite;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.694); /* Initial shadow */
-  transition: box-shadow 0.1s ease-in-out; /* Smooth transition for shadow change */
-  cursor: pointer;
-  
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.694);
+  transition: box-shadow 0.1s ease-in-out;
 }
 
 @keyframes jump {
